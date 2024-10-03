@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto+Slab&display=swap');
+
+:root {
+  --book-height: 215px;
+  --color-background-gradient-end: rgb(26, 26, 46);
+  --color-background-gradient-start: rgb(13, 13, 13);
+  --color-black: 0, 0, 0;
+  --color-container-bg: rgb(29, 25, 25);
+  --color-container-border: rgb(43, 36, 36);
+  --color-gold: 212, 175, 55;
+  --color-shadow: rgba(0, 0, 0, 0.8);
+  --color-text: rgb(229, 229, 229);
+  --color-white: 255, 255, 255;
+  --shelf-color: var(--color-container-border);
+  --shelf-thickness: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    var(--color-background-gradient-start) 40%,
+    var(--color-background-gradient-end) 100%
+  );
+  color: var(--color-text);
+  display: flex;
+  font-family: 'Roboto Slab', serif;
+  height: 100vh;
+  justify-content: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+  }
+}
+
+.container {
+  background: var(--color-container-bg);
+  border-radius: 12px;
+  border: 5px solid var(--color-container-border);
+  box-shadow: 0 8px 15px var(--color-shadow);
+  max-width: 880px;
+  text-align: center;
+}
+
+header {
+  background-color: var(--color-container-border);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+header h1 {
+  color: rgba(var(--color-gold), 0.8);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-shadow:
+    2px 2px 0 rgba(var(--color-black), 0.3),
+    inset -2px -2px 0 rgba(var(--color-white), 0.1),
+    inset 2px 2px 5px rgba(var(--color-black), 0.5);
+}
