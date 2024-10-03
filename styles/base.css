@@ -73,6 +73,11 @@ header h1 {
     inset 2px 2px 5px rgba(var(--color-black), 0.5);
 }
 
+header p {
+  max-width: 36rem;
+  margin: auto;
+}
+
 body::before {
   content: '';
   position: absolute;
