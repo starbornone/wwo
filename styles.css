@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #e5e5e5;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: #d4af37;
+}
+
+header p {
+  font-family: 'Roboto Slab', serif;
+  color: #a7a7a7;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.directory {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.directory li {
+  margin: 15px 0;
+}
+
+.directory a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #c9ae6b;
+  position: relative;
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  transition: color 0.3s ease;
+}
+
+.directory a:hover {
+  color: #fff;
+}
+
+.directory a::before {
+  content: '✧ ';
+  color: #d4af37;
+  opacity: 0;
+  position: absolute;
+  left: -25px;
+  transition: opacity 0.3s ease;
+}
+
+.directory a:hover::before {
+  opacity: 1;
+}
