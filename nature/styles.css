@@ -1,0 +1,72 @@
+body {
+  background-color: rgba(197, 225, 182, 1);
+  font-family: 'Patrick Hand', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: rgba(61, 61, 61, 1);
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: rgba(45, 62, 80, 1);
+  margin: 0;
+  text-align: center;
+}
+
+.tree {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.tree img {
+  height: 405px;
+  pointer-events: none;
+}
+
+.response {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 5px;
+  font-style: italic;
+  color: rgba(45, 62, 80, 1);
+  display: none;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(74, 139, 74, 1);
+}
+
+.tree.clicked .response {
+  display: block;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  color: rgba(61, 61, 61, 1);
+  margin: 0;
+}
+
+footer a {
+  color: rgba(45, 62, 80, 1);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
