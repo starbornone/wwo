@@ -9,9 +9,13 @@ html {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   background: linear-gradient(135deg, rgba(255, 209, 220, 1), rgba(255, 236, 179, 1), rgba(195, 240, 202, 1));
+}
+
+body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 h1 {
