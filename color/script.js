@@ -28,7 +28,7 @@ const colors = [
   },
   {
     name: "Lavender Love",
-    color: "#E6E6FA",
+    color: "#A4A4F0",
     message:
       "I’m soothing, but also a little too good at overthinking everything.",
   },
