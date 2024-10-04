@@ -37,12 +37,14 @@ body {
   margin: 0;
   padding: 20px;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (max-width: 600px) {
   body {
     align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
