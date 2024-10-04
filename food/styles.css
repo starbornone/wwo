@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgba(250, 250, 250, 1); 
+  color: rgba(51, 51, 51, 1); /* #333 */
+  text-align: center;
+}
+
+header {
+  background-color: rgba(165, 214, 167, 1);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: rgba(46, 125, 50, 1);
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 96rem;
+  padding: 20px;
+}
+
+.product {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: 2px solid rgba(129, 199, 132, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+}
+
+.product:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.product-image {
+  align-items: center;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.product-image svg {
+  height: 80%;
+  width: auto;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: rgba(56, 142, 60, 1); 
+}
+
+.product p:first-of-type {
+  font-weight: bold; 
+  margin: 10px 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgba(129, 199, 132, 1);
+  color: rgba(255, 255, 255, 1); 
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
