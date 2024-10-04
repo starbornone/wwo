@@ -74,9 +74,14 @@ footer {
   padding: 20px;
   background-color: rgba(129, 199, 132, 1);
   color: rgba(255, 255, 255, 1); 
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+}
+
+@media (min-width: 600px) {
+  footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
 }
 
 footer a {
