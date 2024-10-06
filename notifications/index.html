@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Away the Stress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/notifications">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="Notifications">
+</head>
+
+<body>
+  <header>
+    <h1>Click Away the Stress</h1>
+    <p class="instructions">Click to remove notifications before your stress builds up too high!</p>
+  </header>
+
+  <div class="game-container">
+    <canvas id="gameCanvas"></canvas>
+    <div class="stress-meter">
+      <div id="stressBar"></div>
+    </div>
+
+    <div id="gameOverScreen" class="hidden">
+      <p class="game-over-text">That's it, man! Game over, man! Game over!</p>
+      <button id="restartButton">Try Again?</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <a href="https://freesound.org/people/CGEffex/sounds/89534/">Bubble Pop</a> by <a
+        href="https://freesound.org/people/CGEffex/">CGEffex</a>
+    </p>
+    <p>
+      <a href="https://weird.sha.codes">weird.sha.codes</a>
+    </p>
+  </footer>
+
+  <audio id="popSound" src="./sounds/very-fast-bubble-pop.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
