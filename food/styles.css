@@ -74,12 +74,23 @@ footer {
   padding: 20px;
   background-color: rgba(129, 199, 132, 1);
   color: rgba(255, 255, 255, 1); 
+  text-align: center;
 }
 
 @media (min-width: 769px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-container {
+    flex: 1;
+  }
+
   footer {
-    bottom: 0;
     position: sticky;
+    bottom: 0;
     width: 100%;
   }
 }
