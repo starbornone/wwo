@@ -94,7 +94,7 @@ new Chart(anxietyCtx, {
       tooltip: {
         callbacks: {
           label: function (context) {
-            if (context.raw.x === 25) {
+            if (context.raw.x === 30) {
               return "Payday: Brief joy followed by immediate existential dread.";
             }
             return `Day ${context.raw.x}: Anxiety Level ${context.raw.y}`;
@@ -145,7 +145,7 @@ new Chart(sleepCtx, {
         callbacks: {
           label: function (context) {
             if (context.dataset.label === "Actual Hours") {
-              return "Bedtime routine sabotaged by 2 AM Wikipedia deep dives.";
+              return "Sabotaged by 2 AM Wikipedia deep dives.";
             }
             return `${context.dataset.label}: ${context.raw}`;
           },
@@ -175,7 +175,7 @@ new Chart(choresCtx, {
           label: function (context) {
             const label = context.label;
             if (label === "Planning Chores") {
-              return "Planning: Where all good intentions go to die.";
+              return "Where all good intentions go to die.";
             }
             return label;
           },
