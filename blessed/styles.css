@@ -56,10 +56,9 @@ body {
 
 @keyframes fall {
   from {
-    transform: translateY(-50px) rotate(0deg);
+    transform: translateY(-300px) rotate(0deg);
     opacity: 1;
   }
-
   to {
     transform: translateY(0) rotate(720deg);
     opacity: 1;

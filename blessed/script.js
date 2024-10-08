@@ -69,20 +69,3 @@ document.getElementById("emptyJar").addEventListener("click", function () {
     jar.style.animation = "";
   }, 500);
 });
-
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(
-  `
-    @keyframes fall {
-      from {
-        transform: translateY(-300px);
-        opacity: 1;
-      }
-      to {
-        transform: translateY(6px);
-        opacity: 1;
-      }
-    }
-`,
-  styleSheet.cssRules.length
-);
