@@ -1,40 +1,19 @@
 @keyframes fall {
   0% {
-      transform: translateX(-50%) translateY(-30vh) rotate(-2deg); 
-      opacity: 0;
+      transform: translateX(-50%) translateY(-30vh) rotate(-4deg); 
   }
-  10% {
-      opacity: 1; 
-  }
-  20% {
-      transform: translateX(-50%) translateY(0) rotate(-1deg); 
+  25% {
+      transform: translateX(-50%) translateY(10) rotate(-2deg); 
   }
   50% {
-      transform: translateX(-50%) translateY(60vh) rotate(2deg); 
+      transform: translateX(-50%) translateY(50vh) rotate(0deg); 
   }
-  80% {
-      transform: translateX(-50%) translateY(100vh) rotate(-1deg);
+  75% {
+      transform: translateX(-50%) translateY(90vh) rotate(-2deg);
   }
   100% {
-      transform: translateX(-50%) translateY(120vh) rotate(-2deg);
-      opacity: 0; 
+      transform: translateX(-50%) translateY(130vh) rotate(-4deg);
   }
-}
-
-.todo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(-150%); 
-  color: rgba(51, 51, 51, 1); 
-  font-size: 20px; 
-  opacity: 0.9;
-  padding: 15px;
-  margin: 5px 0;
-  background: rgba(254, 254, 254, 1);  
-  border: 1px solid rgba(221, 221, 221, 1);
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  animation: fall linear infinite;
 }
 
 .todo:nth-child(1) { animation-duration: 8s; animation-delay: 0s; }
@@ -47,4 +26,3 @@
 .todo:nth-child(8) { animation-duration: 8.8s; animation-delay: 7s; }
 .todo:nth-child(9) { animation-duration: 9.1s; animation-delay: 8s; }
 .todo:nth-child(10) { animation-duration: 10.3s; animation-delay: 9s; }
-

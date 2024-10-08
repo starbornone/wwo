@@ -18,29 +18,36 @@ body {
 }
 
 .todo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(-2deg);
-  color: rgba(51, 51, 51, 1);
-  font-size: 20px;
-  opacity: 0.9;
-  padding: 20px;
-  margin: 10px 0;
+  animation: fall linear infinite;
   background: rgba(254, 254, 254, 1);
+  border-radius: 0.5rem;
   border: 1px solid rgba(221, 221, 221, 1);
-  border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  color: rgba(51, 51, 51, 1);
+  font-size: 1rem;
+  left: 50%;
+  margin: 0.625rem 0;
+  max-width: 36rem;
+  padding: 1.25rem;
+  position: absolute;
+  transform: translateX(-50%) translateY(-150%);
+  width: 100%;
 }
 
 .todo ul {
-  list-style-type: disc;
-  padding-left: 20px;
   color: rgba(68, 68, 68, 1);
+  list-style-type: disc;
+  padding-left: 1.25rem;
 }
 
-.todo ul li {
-  margin-bottom: 5px;
-  font-size: 18px;
+@media (max-width: 768px) {
+  .todo {
+    max-width: 90%;
+  }
+
+  .todo ul li {
+    font-size: 0.8rem;
+  }
 }
 
 footer {
@@ -51,8 +58,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.8); 
   color: rgba(255, 255, 255, 1);
   text-align: center; 
-  padding: 10px 0; 
-  font-size: 16px; 
+  padding: 0.625rem 0; 
+  font-size: 1rem; 
   z-index: 1000; 
 }
 
