@@ -16,10 +16,13 @@ body {
   justify-content: center;
 }
 
-h1 {
+header {
+  text-align: center;
+}
+
+header h1, header p {
   color: rgba(45, 62, 80, 1);
   margin: 0;
-  text-align: center;
 }
 
 .tree {
