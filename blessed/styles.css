@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&display=swap');
+
+* {
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(240, 240, 255, 1);
+  background: linear-gradient(135deg, rgba(182, 193, 255, 0.5) 25%, rgba(240, 240, 255, 1) 25%, rgba(240, 240, 255, 1) 50%, rgba(182, 193, 255, 0.5) 50%, rgba(182, 193, 255, 0.5) 75%, rgba(240, 240, 255, 1) 75%, rgba(240, 240, 255, 1) 100%);
+  background-size: 12px 12px;
+}
+
+.title {
+  font-size: 4rem;
+  color: rgba(255, 105, 180, 1);
+  text-align: center;
+  margin: -40px 0;
+  line-height: 8rem;
+}
+
+.jar-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.jar {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  pointer-events: none;
+}
+
+.star {
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(0) rotate(720deg);
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: rgba(182, 193, 255, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  background-color: rgba(255, 192, 203, 1);
+  color: rgba(55, 58, 60, 1);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: rgba(255, 105, 180, 1);
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: rgba(200, 200, 200, 1);
+  color: rgba(150, 150, 150, 1);
+  cursor: not-allowed;
+}
+
+.full-message {
+  text-align: center;
+  margin-top: 10px;
+  color: rgba(55, 58, 60, 1);
+  display: none;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
