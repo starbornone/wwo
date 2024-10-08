@@ -22,31 +22,49 @@ function initializeGame() {
 
 class Notification {
   constructor(message, x, y) {
+    this.remToPx = (rem) => {
+      const rootFontSize = parseFloat(
+        getComputedStyle(document.documentElement).fontSize
+      );
+      return rem * rootFontSize;
+    };
+
     this.message = message;
     this.x = x;
     this.y = y;
-    this.padding = 20;
-    ctx.font = "16px Poppins";
-    this.width = Math.max(
-      ctx.measureText(message).width + this.padding * 2,
-      200
-    );
-    this.height = 60;
+    this.padding = this.remToPx(1);
+    ctx.font = `${this.getResponsiveFontSize()}px Poppins`;
+    const textWidth = ctx.measureText(message).width;
+    this.width = Math.max(textWidth + this.padding * 2, this.remToPx(10));
+    this.height = this.remToPx(3);
     this.color = this.randomColor();
     this.borderColor = this.darkerShade(this.color);
   }
 
+  getResponsiveFontSize() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      return this.remToPx(0.875);
+    } else {
+      return this.remToPx(1);
+    }
+  }
+
   draw() {
+    ctx.save();
     ctx.fillStyle = this.color;
     ctx.strokeStyle = this.borderColor;
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.roundRect(this.x, this.y, this.width, this.height, 10);
+    ctx.roundRect(this.x, this.y, this.width, this.height, this.remToPx(0.625));
     ctx.fill();
     ctx.stroke();
     ctx.fillStyle = "black";
-    ctx.font = "16px Poppins";
-    ctx.fillText(this.message, this.x + 10, this.y + 35);
+    ctx.font = `${this.getResponsiveFontSize()}px Poppins`;
+    const textY =
+      this.y + (this.height + parseInt(ctx.font, 10)) / 2 - this.remToPx(0.375);
+    ctx.fillText(this.message, this.x + this.padding, textY);
+    ctx.restore();
   }
 
   randomColor() {

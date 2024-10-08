@@ -1,3 +1,10 @@
+:root {
+  --primary-color: rgba(255, 94, 94, 1);
+  --secondary-color: rgba(51, 51, 51, 1);
+  --background-color: rgba(240, 240, 240, 1);
+  --text-color: rgba(255, 255, 255, 1);
+}
+
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -5,8 +12,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  background-color: rgba(240, 240, 240, 1);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,27 +25,28 @@ body {
 
 header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: rgba(51, 51, 51, 1);
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  letter-spacing: 1px;
   background: linear-gradient(45deg, rgba(102, 153, 255, 1), rgba(204, 255, 204, 1));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: rgba(51, 51, 51, 1);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.625rem;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .instructions {
   font-weight: 400;
   color: rgba(102, 102, 102, 0.8);
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -53,7 +65,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(240, 240, 240, 1);
+  background-color: var(--background-color);
   overflow: hidden;
 }
 
@@ -66,22 +78,30 @@ canvas {
 
 .stress-meter {
   position: absolute;
-  top: 10px;
+  top: 0.625rem;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  height: 20px;
+  height: 1.25rem;
   background-color: rgba(221, 221, 221, 1);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   z-index: 10;
 }
 
+@media (max-width: 480px) {
+  .stress-meter {
+    width: 90%;
+    height: 1rem;
+  }
+}
+
 #stressBar {
   height: 100%;
-  background-color: rgba(255, 94, 94, 1);
+  background-color: var(--primary-color);
   width: 0;
   transition: width 0.2s ease;
+  will-change: width;
 }
 
 #gameOverScreen {
@@ -95,22 +115,23 @@ canvas {
   height: 100%;
   z-index: 100;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: var(--text-color);
+  will-change: opacity, transform;
 }
 
 .game-over-text {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 #restartButton {
-  padding: 10px 20px;
-  background-color: rgba(255, 94, 94, 1);
-  color: rgba(255, 255, 255, 1);
+  padding: 0.625rem 1.25rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   transition: background-color 0.3s ease;
 }
 
@@ -120,10 +141,11 @@ canvas {
 
 footer {
   text-align: center;
-  padding: 10px 0;
-  background-color: rgba(51, 51, 51, 1);
-  color: rgba(255, 255, 255, 1);
+  padding: 0.625rem 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   flex-shrink: 0;
+  font-size: 1rem;
 }
 
 footer a {
@@ -133,4 +155,23 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.312rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
 }
