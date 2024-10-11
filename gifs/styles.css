@@ -1,0 +1,139 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: rgba(255, 249, 196, 1);
+  color: rgba(34, 34, 34, 1);
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 40rem;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3rem;
+  color: rgba(255, 89, 94, 1);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+}
+
+p {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: rgba(0, 100, 200, 1);
+}
+
+.task {
+  font-weight: 700;
+}
+
+#next-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  background-color: rgba(0, 200, 150, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 20rem;
+  transition: background-color 0.3s ease;
+}
+
+#next-button:hover {
+  background-color: rgba(0, 160, 120, 1);
+}
+
+img {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: rgba(255, 89, 94, 1);
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgba(255, 249, 196, 1);
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 1.5rem;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  #next-button {
+      font-size: 1.25rem;
+      padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: 1rem;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.125rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  #next-button {
+      font-size: 1.125rem;
+      padding: 0.5rem 1rem;
+  }
+
+  img {
+      max-width: 20rem;
+  }
+}
