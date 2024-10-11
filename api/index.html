@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/api">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="API">
+</head>
+
+<body>
+  <header>
+    <h1>🐝 Bee API 🐝</h1>
+    <p>The sweetest API for buzzing around!</p>
+  </header>
+
+  <main>
+    <section class="endpoint">
+      <h2>GET /hive</h2>
+      <p>Returns information about the hive, including its mood, honey stock, and ongoing bee drama.</p>
+      <div class="api-details">
+        <div class="request-url">
+          <h3>Request</h3>
+          <pre><code class="http">GET https://api.beehive.com/v1/hive</code></pre>
+        </div>
+        <div class="response">
+          <h3>Response</h3>
+          <pre><code class="json">{
+  "hive_mood": "buzzing with passive aggression",
+  "honey_stock": "low, but we pretend it's fine",
+  "queen_status": "still waiting for the queen to acknowledge our hard work",
+  "bee_drama": "Gina won't stop gossiping about Steve stealing nectar"
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="endpoint">
+      <h2>POST /foraging</h2>
+      <p>Send a bee on a foraging mission to collect nectar or pollen.</p>
+      <div class="api-details">
+        <div class="request-url">
+          <h3>Request</h3>
+          <pre><code class="http">POST https://api.beehive.com/v1/foraging</code></pre>
+        </div>
+        <div class="request-body">
+          <h3>Request Body</h3>
+          <pre><code class="json">{
+  "bee_name": "Buzz",
+  "task": "nectar",
+  "flower": "lavender"
+}</code></pre>
+        </div>
+        <div class="response">
+          <h3>Response</h3>
+          <pre><code class="json">{
+  "status": "success",
+  "message": "Buzz is off to get some lavender nectar. Hopefully, he doesn't get distracted.",
+  "return_eta": "15 minutes"
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="endpoint">
+      <h2>GET /honey</h2>
+      <p>Retrieve the hive's current honey stock and its quality level.</p>
+      <div class="api-details">
+        <div class="request-url">
+          <h3>Request</h3>
+          <pre><code class="http">GET https://api.beehive.com/v1/honey</code></pre>
+        </div>
+        <div class="response">
+          <h3>Response</h3>
+          <pre><code class="json">{
+  "total_honey_stock": "5kg",
+  "quality": "passable, but definitely not artisan"
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="endpoint">
+      <h2>POST /sting</h2>
+      <p>Triggers a bee to sting a target (use responsibly!).</p>
+      <div class="api-details">
+        <div class="request-url">
+          <h3>Request</h3>
+          <pre><code class="http">POST https://api.beehive.com/v1/sting</code></pre>
+        </div>
+        <div class="request-body">
+          <h3>Request Body</h3>
+          <pre><code class="json">{
+  "bee_name": "Buzzy",
+  "target": "AnnoyingHuman"
+}</code></pre>
+        </div>
+        <div class="response">
+          <h3>Response</h3>
+          <pre><code class="json">{
+  "status": "success",
+  "message": "Buzzy has stung AnnoyingHuman. Buzzy is now on a heroic farewell journey to bee heaven."
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="https://weird.sha.codes">weird.sha.codes</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="script.js"></script>
+</body>
+
+</html>
