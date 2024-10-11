@@ -1,0 +1,26 @@
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.wisp {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.2);
+  animation: wisp-animation var(--duration, 30s) infinite ease-in-out;
+}
+
+@keyframes wisp-animation {
+  0% {
+    transform: translate(var(--startX, 0), var(--startY, 0)) scale(var(--scaleStart, 1));
+    opacity: var(--opacityStart, 0.5);
+  }
+  100% {
+    transform: translate(var(--endX, 10vw), var(--endY, -50vh)) scale(var(--scaleEnd, 1));
+    opacity: var(--opacityEnd, 1);
+  }
+}
