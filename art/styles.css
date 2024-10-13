@@ -38,7 +38,6 @@ body {
   color: rgba(55, 58, 60, 1);
 }
 
-/* Base styles (for larger screens) */
 .gallery-container {
   display: flex;
   gap: 24rem;
