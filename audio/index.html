@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>90s Walkman Audio Player</title>
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/audio">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="Audio">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="walkman">
+    <div class="screen">
+      <p id="track-info">Artist Name - Track Name</p>
+      <div class="volume-indicator">
+        <div id="volume-bar"></div>
+      </div>
+    </div>
+
+    <div class="controls-wrapper">
+      <button id="volume-minus">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </button>
+      <button id="back-btn">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29l0-320c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241 64 96c0-17.7-14.3-32-32-32S0 78.3 0 96L0 416c0 17.7 14.3 32 32 32s32-14.3 32-32l0-145 11.5 9.6 192 160z" />
+        </svg>
+      </button>
+      <button id="stop-btn">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+        </svg>
+      </button>
+      <button id="play-btn">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+          <path
+            d="M116.5 71.4c-9.5-7.9-22.8-9.7-34.1-4.4S64 83.6 64 96l0 320c0 12.4 7.2 23.7 18.4 29s24.5 3.6 34.1-4.4l192-160c7.3-6.1 11.5-15.1 11.5-24.6s-4.2-18.5-11.5-24.6l-192-160zM448 96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 320c0 17.7 14.3 32 32 32s32-14.3 32-32l0-320zm128 0c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 320c0 17.7 14.3 32 32 32s32-14.3 32-32l0-320z" />
+        </svg>
+      </button>
+      <button id="next-btn">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416L0 96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241l0-145c0-17.7 14.3-32 32-32s32 14.3 32 32l0 320c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-145-11.5 9.6-192 160z" />
+        </svg>
+      </button>
+      <button id="volume-plus">
+        <svg aria-hidden="true" class="player-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="https://weird.sha.codes">weird.sha.codes</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
