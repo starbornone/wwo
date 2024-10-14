@@ -47,7 +47,9 @@ function updateTrackInfo() {
 }
 
 function playTrack() {
-  audioPlayer.src = songs[currentTrackIndex].file;
+  if (audioPlayer.src !== songs[currentTrackIndex].file) {
+    audioPlayer.src = songs[currentTrackIndex].file;
+  }
   audioPlayer.play();
   updateTrackInfo();
   clearTimeout(marqueeTimeout);
@@ -68,7 +70,12 @@ function previousTrack() {
 
 playPauseBtn.addEventListener("click", () => {
   if (audioPlayer.paused) {
-    playTrack();
+    audioPlayer.play();
+    trackInfo.textContent = `Playing: ${songs[currentTrackIndex].name}`;
+    clearTimeout(marqueeTimeout);
+    marqueeTimeout = setTimeout(() => {
+      trackInfo.classList.add("marquee");
+    }, 3000);
   } else {
     audioPlayer.pause();
     trackInfo.textContent = `Paused: ${songs[currentTrackIndex].name}`;
