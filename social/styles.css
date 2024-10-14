@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Gloria+Hallelujah&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: rgba(240, 243, 245, 1);
+  color: rgba(50, 50, 50, 1);
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(0, 123, 167, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.conversation {
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 1rem;
+  max-height: calc(100vh - 25rem);
+}
+
+.message {
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  display: inline-block;
+  max-width: 60%;
+  word-wrap: break-word;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.user-message {
+  background-color: rgba(224, 224, 224, 1);
+  color: rgba(50, 50, 50, 1);
+  float: right;
+  text-align: right;
+  margin-left: auto;
+  clear: both;
+}
+
+.friend-message {
+  background-color: rgba(173, 216, 230, 1);
+  color: rgba(25, 50, 100, 1);
+  float: left;
+  text-align: left;
+  clear: both;
+}
+
+.inner-monologue {
+  font-style: italic;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: rgba(255, 69, 58, 1);
+  margin: 0.5rem 0;
+  max-width: 60%;
+  float: right;
+  text-align: right;
+  margin-left: auto;
+  clear: both;
+}
+
+.jitter-character {
+  display: inline-block;
+  animation: textJitter ease-in-out infinite alternate;
+}
+
+@keyframes textJitter {
+  0% { transform: translate(0px, 0px); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(-1px, -1px); }
+}
+
+
+.message-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid rgba(173, 216, 230, 0.5);
+}
+
+.user-input {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(230, 230, 230, 1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: rgba(38, 166, 154, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(31, 134, 124, 1);
+}
+
+button:disabled {
+  background-color: rgba(38, 166, 154, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(0, 123, 167, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    max-width: 800px;
+  }
+
+  .chat-window {
+    padding: 1rem;
+  }
+
+  .conversation {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+
+  .user-input {
+    flex-wrap: nowrap;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  button {
+    width: 25%;
+    margin-top: 0;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+}
