@@ -35,7 +35,7 @@ body {
   justify-content: center;
   line-height: 1.6;
   margin: 0;
-  padding: 20px;
+  padding: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -45,6 +45,7 @@ body {
     align-items: flex-start;
     overflow-x: hidden;
     overflow-y: auto;
+    padding: 1rem;
   }
 }
 
@@ -61,8 +62,7 @@ body {
 
 header {
   background-color: var(--color-container-border);
-  margin-bottom: 20px;
-  padding: 20px;
+  padding: 2rem;
 }
 
 header h1 {
@@ -81,13 +81,22 @@ header p {
   margin: 1rem auto;
 }
 
-header p a {
+header p a,
+footer p a {
   color: rgba(var(--color-gold), 0.8);
   text-decoration: none;
 }
 
-header p a:hover {
+header p a:hover,
+footer p a:hover {
   text-decoration: underline;
+}
+
+footer p {
+  background-color: var(--color-container-border);
+  font-size: 0.7rem;
+  margin: 0 auto;
+  padding: 0.25rem;
 }
 
 body::before {
