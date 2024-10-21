@@ -1,0 +1,28 @@
+.icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.start-icon {
+  background: linear-gradient(135deg, rgb(100, 200, 255), rgb(100, 150, 255));
+}
+
+.finder-icon {
+  background: linear-gradient(135deg, rgb(0, 120, 255), rgb(100, 160, 255));
+}
+
+.trash-bin-icon {
+  background: linear-gradient(135deg, rgb(190, 190, 190), rgb(130, 130, 130));
+}
+
+.app-icon {
+  background: linear-gradient(135deg, rgb(255, 100, 100), rgb(255, 200, 100));
+}
