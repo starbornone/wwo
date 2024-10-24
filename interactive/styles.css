@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 1), rgba(20, 20, 20, 1));
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.container {
+  background-color: rgba(24, 24, 24, 0.95);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 45rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 255, 255, 0.9);
+  letter-spacing: 0.05rem;
+  text-transform: none;
+}
+
+#story {
+  margin-bottom: 2rem;
+}
+
+#story-text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: rgba(200, 200, 255, 0.9);
+  font-style: italic;
+  letter-spacing: 0.05rem;
+}
+
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(138, 43, 226, 0.9);
+  border: none;
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(186, 85, 211, 1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(186, 85, 211, 1);
+}
+
+button:active {
+  background-color: rgba(104, 34, 165, 1);
+  transform: scale(0.98);
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: rgba(0, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: rgba(0, 255, 255, 1);
+}

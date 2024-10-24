@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Life</title>
+
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/interactive">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="Interactive">
+  <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="grid-overlay"></div>
+
+  <div class="container">
+    <h1>Game of Life</h1>
+    <div id="story">
+      <p id="story-text">Welcome to your life. Born into a world you didn’t ask for, what will you do next?</p>
+    </div>
+    <div id="choices">
+      <button onclick="choose('cry')">Cry</button>
+      <button onclick="choose('silence')">Stay Silent</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>I mean, I <i>could</i> have made Vampire Survivors clone...<br />
+      But who's got time for that?
+    </p>
+    <p><a href="https://weird.sha.codes">weird.sha.codes</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
