@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>#matrix || irc.libera.chat</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/chat">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="Chat">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+  <div class="irc-container">
+    <main>
+      <div class="sidebar">
+        <div class="server-info">
+          <p>Connected to irc.libera.chat</p>
+        </div>
+        <div class="channel-list">
+          <h2>Channels</h2>
+          <ul>
+            <li>#matrix</li>
+            <li>#zion</li>
+            <li>#nebuchadnezzar</li>
+          </ul>
+        </div>
+        <div class="user-list">
+          <h2>Users</h2>
+          <ul id="userList">
+          </ul>
+        </div>
+      </div>
+      <div class="chat-area">
+        <div class="chat-header">
+          <p>Channel: #matrix | Topic: Welcome to the Matrix Chat</p>
+        </div>
+        <div class="chat-window" id="chatWindow">
+        </div>
+        <div class="input-area">
+          <input type="text" id="messageInput" placeholder="Type your message and press Enter">
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <p>
+      <a href="https://weird.sha.codes">weird.sha.codes</a>
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+:root {
+  --accent-color: rgba(0, 255, 0, 1);
+  --bg-color: rgba(0, 0, 0, 1);
+  --border-color: rgba(80, 80, 80, 1);
+  --input-bg: rgba(30, 30, 30, 1);
+  --link-color: rgba(0, 128, 255, 1);
+  --text-color: rgba(0, 255, 0, 1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier Prime', monospace;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.irc-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: var(--input-bg);
+  border-right: 0.1rem solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.server-info {
+  border-bottom: 0.1rem solid var(--border-color);
+  padding: 0.5rem;
+}
+
+.channel-list, .user-list {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.channel-list h2, .user-list h2 {
+  border-bottom: 0.1rem solid var(--border-color);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.channel-list ul, .user-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.channel-list li, .user-list li {
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.channel-list li:hover, .user-list li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: var(--input-bg);
+  border-bottom: 0.1rem solid var(--border-color);
+  padding: 0.5rem;
+}
+
+.chat-header p {
+  margin: 0;
+}
+
+.chat-window {
+  flex-grow: 1;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.message {
+  margin-bottom: 0.5rem;
+}
+
+.message .timestamp {
+  color: rgba(150, 150, 150, 1);
+  margin-right: 0.5rem;
+}
+
+.message .user {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+.message .text {
+  color: var(--text-color);
+}
+
+.input-area {
+  align-items: center;
+  background-color: var(--input-bg);
+  border-top: 0.1rem solid var(--border-color);
+  box-sizing: border-box;
+  display: flex;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.input-area input {
+  background-color: var(--bg-color);
+  border: 0.1rem solid var(--border-color);
+  box-sizing: border-box;
+  color: var(--text-color);
+  flex-grow: 1;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+footer {
+  align-items: center;
+  background-color: var(--input-bg);
+  border-top: 0.1rem solid var(--border-color);
+  display: flex;
+  flex-shrink: 0;
+  height: 2rem;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p a {
+  color: var(--link-color);
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
