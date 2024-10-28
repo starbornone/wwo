@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Request Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://weird.sha.codes/forms">
+  <link rel="octo:octothorpes" href="weirdweboctober">
+  <link rel="octo:octothorpes" href="Forms">
+  <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Resource Request Form</h1>
+    <p>Welcome to the Community Resource Commons. This form allows you to request essential items sustainably managed
+      and distributed to meet the needs of all community members.</p>
+    <p>To ensure fair access, please note that:</p>
+    <ul>
+      <li>Requests are fulfilled every day to allow for efficient distribution. Delivery times may vary depending
+        on item availability.</li>
+      <li>Each item has a maximum request limit based on expected individual needs. Please request only what you need.
+      </li>
+      <li>To prevent shortages, requests for items in high demand may be temporarily limited. The system restocks items
+        regularly based on community production and imports.</li>
+      <li>Some items, such as fresh produce, dairy, and meat, may spoil over time. Please be considerate when ordering
+        perishable goods in large quantities to avoid unnecessary waste.</li>
+      <li>We ask all members to consider others' needs, allowing us to collectively maintain a steady supply of
+        essentials.</li>
+    </ul>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <section id="commons-status">
+        <h2>Available Resources</h2>
+        <ul id="resource-list"></ul>
+      </section>
+    </div>
+
+    <div class="container">
+      <form id="resource-form">
+        <label for="autocomplete">Choose a resource:</label>
+        <div class="autocomplete-container">
+          <input type="text" id="autocomplete" placeholder="Type a resource name...">
+          <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div>
+
+        <label for="amount">Amount:</label>
+        <div class="amount-container">
+          <div class="input-container">
+            <input type="number" id="amount" min="1" value="1">
+            <span id="unit-adornment"></span>
+          </div>
+          <span id="max-request-display"></span>
+        </div>
+
+        <button type="button" id="request-btn">Request</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://weird.sha.codes">weird.sha.codes</a>
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
