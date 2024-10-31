@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(29, 31, 32, 1);
+  background-image: url('https://res.cloudinary.com/starborn/image/upload/q_auto/v1729944433/wwo/freestocks-kVv8AvoKJ7g-unsplash_efarjk.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(229, 229, 229, 1);
+  font-family: 'Grenze Gotisch', serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
+}
+
+.open-book {
+  background-color: rgba(214, 205, 198, 1);
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1rem 3rem;
+  color: rgba(0, 0, 0, 1);
+  padding: 2rem;
+  width: 100%;
+}
+
+.open-book * {
+  position: relative;
+}
+
+.open-book header {
+  padding-bottom: 1rem;
+}
+
+.open-book footer {
+  padding-top: 2rem;
+}
+
+.open-book header *,
+.open-book footer * {
+  font-family: 'Grenze Gotisch', serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.open-book .chapter-title {
+  font-family: 'Grenze Gotisch', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  line-height: 1.25;
+  margin: 1rem 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.open-book article {
+  line-height: 1.5;
+}
+
+.open-book article *:not(.chapter-title):not(hr):not(dl) {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.open-book article p {
+  text-indent: 2rem;
+}
+
+.open-book .chapter-title+p {
+  text-indent: 0;
+}
+
+.open-book .chapter-title+p:first-letter {
+  float: left;
+  font-family: 'Grenze Gotisch', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 0.65;
+  padding: 0.15rem 0.05rem 0 0;
+}
+
+.open-book a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: inherit;
+  text-decoration: none;
+}
+
+.open-book a:hover {
+  border-color:rgba(0, 0, 0, 0.8)
+}
+
+.open-book header,
+.open-book footer {
+  text-align: center;
+}
+
+.page-number {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: rgba(29, 31, 32, 1);
+    background-image: url('https://res.cloudinary.com/starborn/image/upload/q_auto/v1729944433/wwo/freestocks-kVv8AvoKJ7g-unsplash_efarjk.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #wrapper {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .open-book {
+    margin: 1rem;
+    position: relative;
+  }
+
+  .open-book header,
+  .open-book footer div {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .page-number {
+    display: block;
+  }
+
+  .open-book::before {
+    background-color: rgba(44, 30, 37, 1);
+    border-radius: 0.25rem;
+    bottom: -1rem;
+    content: '';
+    left: -1rem;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    z-index: -1;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 1);
+  }
+
+  .open-book::after {
+    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 46%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.5) 51%, rgba(0, 0, 0, 0.2) 52%, transparent 100%);
+    bottom: -1rem;
+    content: '';
+    left: 50%;
+    position: absolute;
+    top: -1rem;
+    transform: translate(-50%, 0);
+    width: 4rem;
+    z-index: 1;
+  }
+
+  .open-book>* {
+    column-count: 2;
+    column-gap: 6rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .open-book header::before,
+  .open-book header::after,
+  .open-book footer::before,
+  .open-book footer::after {
+    background-color: rgba(214, 205, 198, 1);
+    border-radius: 25%;
+    content: '';
+    height: 2rem;
+    position: absolute;
+    z-index: -1;
+    width: calc(50% + 2rem);
+  }
+
+  .open-book header::before,
+  .open-book footer::before,
+  .open-book footer::after {
+    border-top-left-radius: 0;
+  }
+
+  .open-book header::after,
+  .open-book footer::before,
+  .open-book footer::after {
+    border-top-right-radius: 0;
+  }
+
+  .open-book header::before,
+  .open-book header::after,
+  .open-book footer::after {
+    border-bottom-right-radius: 0;
+  }
+
+  .open-book header::before,
+  .open-book header::after,
+  .open-book footer::before {
+    border-bottom-left-radius: 0;
+  }
+
+  .open-book header::before,
+  .open-book header::after {
+    top: -2.65rem;
+  }
+
+  .open-book header::before,
+  .open-book footer::before {
+    right: 50%;
+  }
+
+  .open-book header::before {
+    transform: rotate(-2deg);
+  }
+
+  .open-book header::after,
+  .open-book footer::after {
+    left: 50%;
+  }
+
+  .open-book header::after {
+    transform: rotate(2deg);
+  }
+
+  .open-book footer::before,
+  .open-book footer::after {
+    bottom: -2.65rem;
+  }
+
+  .open-book footer::before {
+    transform: rotate(2deg);
+  }
+
+  .open-book footer::after {
+    transform: rotate(-2deg);
+  }
+}
